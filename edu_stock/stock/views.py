@@ -13,7 +13,7 @@ class CurrencyView(generics.ListAPIView):
     """
     API endpoint that allows listing currencies, in alphabetical order
     """
-    queryset = Currency.objects.all().order_by('id')
+    queryset = Currency.objects.all().order_by('identifier')
     serializer_class = CurrencySerializer
     permission_classes = [permissions.IsAuthenticated]
 
