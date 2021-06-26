@@ -1,4 +1,5 @@
 from rest_framework import generics
+from rest_framework import viewsets
 from rest_framework import permissions
 
 from .models import Currency, Order
@@ -14,10 +15,11 @@ class CurrencyView(generics.ListAPIView):
     permission_classes = [permissions.IsAuthenticated]
 
 
-class OrderView(generics.ListCreateAPIView):
+class OrderViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows listing and creating orders
     """
     queryset = Order.objects.all().order_by('-id')
     serializer_class = OrderSerializer
     permission_classes = [permissions.IsAuthenticated]
+    pagination_class = None  # remove pagination for now
