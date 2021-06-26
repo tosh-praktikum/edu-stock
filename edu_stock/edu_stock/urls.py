@@ -17,4 +17,6 @@ urlpatterns = [
     path('currencies', CurrencyView.as_view()),
     path('accounts', AccountView.as_view()),
     path('admin/', admin.site.urls),
+    path('auth/', include('djoser.urls')),
+    path('auth/', include('djoser.urls.jwt')),
 ]
