@@ -19,3 +19,15 @@ Authorization: Bearer {{token}}
 ### Информация об ордерах
 GET http://localhost:8000/orders
 Authorization: Bearer {{token}}
+
+### Новый ордер
+POST http://localhost:8000/orders/
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "sell_currency": "RUB",
+    "amount": "15.00",
+    "buy_currency": "USD",
+    "price": "30.00"
+}
