@@ -16,6 +16,10 @@ Content-Type: application/json
 GET http://localhost:8000/accounts
 Authorization: Bearer {{token}}
 
+### Информация о валютах
+GET http://localhost:8000/currencies
+Authorization: Bearer {{token}}
+
 ### Информация об ордерах
 # @name orders
 GET http://localhost:8000/orders
