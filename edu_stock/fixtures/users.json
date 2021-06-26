@@ -1,16 +1,24 @@
 [
   {
-      "model": "stock.currency",
+      "model": "auth.user",
       "pk": 1,
       "fields": {
-        "username": "Jeff Bezos"
+        "username": "jeff@amazon.com",
+        "email": "jeff@amazon.com",
+        "password": "pbkdf2_sha256$150000$YWmfpL898giy$w0TTVp9Fw9Jo99DMXXJwapkSnjoJiV0jU9qTTsAincA=",
+        "first_name": "Jeff",
+        "last_name": "Bezos"
       }
   },
   {
-      "model": "stock.currency",
+      "model": "auth.user",
       "pk": 2,
       "fields": {
-          "username": "Mark Zuckerberg"
+          "username": "mark@facebook.com",
+          "email": "mark@facebook.com",
+          "password": "pbkdf2_sha256$150000$YWmfpL898giy$w0TTVp9Fw9Jo99DMXXJwapkSnjoJiV0jU9qTTsAincA=",
+          "first_name": "Mark",
+          "last_name": "Zuckerberg"
       }
   }
 ]
