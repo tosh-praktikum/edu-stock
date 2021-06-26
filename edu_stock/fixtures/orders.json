@@ -1,0 +1,29 @@
+[
+    {
+        "model": "stock.order",
+        "fields": {
+            "seller_account": 5,
+            "amount": 5000.33,
+            "currency": "EUR",
+            "price": 100
+        }
+    },
+    {
+        "model": "stock.order",
+        "fields": {
+            "seller_account": 6,
+            "amount": 30,
+            "currency": "RUB",
+            "price": 15
+        }
+    },
+    {
+        "model": "stock.order",
+        "fields": {
+            "seller_account": 6,
+            "amount": 50,
+            "currency": "EUR",
+            "price": 45
+        }
+    }
+]
