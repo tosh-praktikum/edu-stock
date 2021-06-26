@@ -1,6 +1,6 @@
 from django.db import transaction
 from django.core.exceptions import ValidationError
-from rest_framework import generics, viewsets, mixins, permissions
+from rest_framework import generics, viewsets, mixins, permissions, filters
 
 from .models import Currency, Order
 from .serializers import CurrencySerializer, OrderSerializer
@@ -17,7 +17,8 @@ class CurrencyView(generics.ListAPIView):
     serializer_class = CurrencySerializer
     permission_classes = [permissions.IsAuthenticated]
 
-    search_fields = ['identifier']
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['name', 'identifier']
 
 class OrderViewSet(mixins.RetrieveModelMixin, mixins.ListModelMixin, mixins.DestroyModelMixin, mixins.CreateModelMixin, viewsets.GenericViewSet):
     """
