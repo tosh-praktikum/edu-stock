@@ -10,8 +10,3 @@ Content-Type: application/json
 ### Информация об аккаунте
 GET http://localhost:8000/accounts
 Authorization: Bearer <token>
-
-{
-    "username": "jeff@amazon.com",
-    "password": "123"
-}
