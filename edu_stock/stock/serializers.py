@@ -12,4 +12,4 @@ class CurrencySerializer(serializers.ModelSerializer):
 class OrderSerializer(serializers.ModelSerializer):
     class Meta:
         model = Order
-        fields = ['account', 'amount']
+        fields = ['account', 'amount', 'currency', 'price']
