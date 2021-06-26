@@ -4,7 +4,7 @@ POST http://localhost:8000/auth/jwt/create
 Content-Type: application/json
 
 {
-    "username": "jeff@amazon.com",
+    "username": "mark@facebook.com",
     "password": "123"
 }
 
@@ -41,14 +41,26 @@ GET http://localhost:8000/orders?price_min=50
 Authorization: Bearer {{token}}
 
 
+### Номер интересующего нас ордера
+
+@order_id = 1
+
+### Детали ордера
+GET http://localhost:8000/orders/{{order_id}}
+Authorization: Bearer {{token}}
+
+### Закрыть ордер
+DELETE http://localhost:8000/orders/{{order_id}}/
+Authorization: Bearer {{token}}
+
 ### Новый ордер
 POST http://localhost:8000/orders/
 Authorization: Bearer {{token}}
 Content-Type: application/json
 
 {
-    "sell_currency": "RUB",
-    "amount": "15.00",
-    "buy_currency": "USD",
-    "price": "30.00"
+    "sell_currency": "USD",
+    "amount": "250.00",
+    "buy_currency": "RUB",
+    "price": "200.00"
 }
