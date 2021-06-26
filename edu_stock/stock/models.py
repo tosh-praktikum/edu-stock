@@ -8,5 +8,7 @@ class Currency(models.Model):
 
 
 class Order(models.Model):
-    account = models.ForeignKey('accounts.Account', related_name = "orders", on_delete = models.CASCADE)
+    seller_account = models.ForeignKey('accounts.Account', related_name = "sell_orders", on_delete = models.CASCADE)
     amount = models.DecimalField(decimal_places = 2, max_digits = 20)
+    currency = models.ForeignKey('stock.Currency', related_name="buy_orders", on_delete=models.CASCADE)
+    price = models.DecimalField(decimal_places=2, max_digits=20)
