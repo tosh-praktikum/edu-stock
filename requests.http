@@ -17,7 +17,15 @@ GET http://localhost:8000/accounts
 Authorization: Bearer {{token}}
 
 ### Информация об ордерах
+# @name orders
 GET http://localhost:8000/orders
+Authorization: Bearer {{token}}
+
+###
+@nextOrderPage = {{orders.response.body.$.next}}
+
+### Информация об ордерах по страницам
+GET {{nextOrderPage}}
 Authorization: Bearer {{token}}
 
 ### Информация об ордерах c валютой покупки EUR
