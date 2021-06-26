@@ -10,6 +10,7 @@ class CurrencySerializer(serializers.ModelSerializer):
 
 
 class OrderSerializer(serializers.ModelSerializer):
+    sell_currency = serializers.PrimaryKeyRelatedField(read_only = True, source = "seller_account.currency")
     class Meta:
         model = Order
-        fields = ['account', 'amount', 'currency', 'price']
+        fields = ['sell_currency', 'amount', 'currency', 'price']
