@@ -41,7 +41,7 @@
         "fields": {
             "user": 2,
             "currency": "RUB",
-            "balance": 0
+            "balance": 10000
         }
     },
     {
