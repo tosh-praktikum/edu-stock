@@ -46,7 +46,7 @@ class OrderViewSet(mixins.RetrieveModelMixin, mixins.ListModelMixin, mixins.Dest
                 instance.seller_account.save()
                 instance.delete()
             else:
-                buy_account = self.request.user.accounts.filter(currency=instance.currency).first()
+                buy_account = Account.objects.filter(user = self.request.user, currency = instance.currency).first()
                 if not buy_account:
                     raise ValidationError("no appropriate account for buying found")
                 if buy_account.balance < instance.price:
