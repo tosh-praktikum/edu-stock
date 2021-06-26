@@ -1,0 +1,37 @@
+[
+    {
+        "model": "stock.currency",
+        "fields": {
+            "name": "Russian Rubles",
+            "identifier": "RUB"
+        }
+    },
+    {
+        "model": "stock.currency",
+        "fields": {
+            "name": "Euro",
+            "identifier": "EUR"
+        }
+    },
+    {
+        "model": "stock.currency",
+        "fields": {
+            "name": "US Dollars",
+            "identifier": "USD"
+        }
+    },
+    {
+        "model": "stock.currency",
+        "fields": {
+            "name": "Israeli new shekels",
+            "identifier": "ILS"
+        }
+    },
+    {
+        "model": "stock.currency",
+        "fields": {
+            "name": "Japanese yen",
+            "identifier": "JPY"
+        }
+    }
+]

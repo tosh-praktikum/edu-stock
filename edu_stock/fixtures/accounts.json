@@ -1,0 +1,56 @@
+[
+    {
+        "model": "accounts.account",
+        "pk": 1,
+        "fields": {
+            "user": 1,
+            "currency": "RUB",
+            "balance": 100000.09
+        }
+    },
+    {
+        "model": "accounts.account",
+        "pk": 2,
+        "fields": {
+            "user": 1,
+            "currency": "EUR",
+            "balance": 99999999999999
+        }
+    },
+    {
+        "model": "accounts.account",
+        "pk": 3,
+        "fields": {
+            "user": 1,
+            "currency": "USD",
+            "balance": 25000000000
+        }
+    },
+    {
+        "model": "accounts.account",
+        "pk": 4,
+        "fields": {
+            "user": 1,
+            "currency": "ILS",
+            "balance": 0.01
+        }
+    },
+    {
+        "model": "accounts.account",
+        "pk": 5,
+        "fields": {
+            "user": 2,
+            "currency": "RUB",
+            "balance": 0
+        }
+    },
+    {
+        "model": "accounts.account",
+        "pk": 6,
+        "fields": {
+            "user": 2,
+            "currency": "USD",
+            "balance": 123456789
+        }
+    }
+]

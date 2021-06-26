@@ -1,16 +1,16 @@
 [
-    {
-      "model": "auth.user",
+  {
+      "model": "stock.currency",
       "pk": 1,
       "fields": {
         "username": "Jeff Bezos"
       }
-    },
-    {
-        "model": "auth.user",
-        "pk": 2,
-        "fields": {
-            "username": "Mark Zuckerberg"
-        }
-    }
-  ]
+  },
+  {
+      "model": "stock.currency",
+      "pk": 2,
+      "fields": {
+          "username": "Mark Zuckerberg"
+      }
+  }
+]
