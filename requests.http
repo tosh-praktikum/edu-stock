@@ -1,4 +1,5 @@
 ### Авторизация
+# @name login
 POST http://localhost:8000/auth/jwt/create
 Content-Type: application/json
 
@@ -7,10 +8,14 @@ Content-Type: application/json
     "password": "123"
 }
 
+###
+
+@token = {{login.response.body.$.access}}
+
 ### Информация об аккаунте
 GET http://localhost:8000/accounts
-Authorization: Bearer <token>
+Authorization: Bearer {{token}}
 
-### Список ордеров
+### Информация об ордерах
 GET http://localhost:8000/orders
-Authorization: Bearer <token>
+Authorization: Bearer {{token}}
