@@ -20,6 +20,19 @@ Authorization: Bearer {{token}}
 GET http://localhost:8000/orders
 Authorization: Bearer {{token}}
 
+### Информация об ордерах c валютой покупки EUR
+GET http://localhost:8000/orders?buy_currency=EUR
+Authorization: Bearer {{token}}
+
+### Информация об ордерах c валютой покупки EUR и валютой продажи USD
+GET http://localhost:8000/orders?buy_currency=EUR&sell_currency=USD
+Authorization: Bearer {{token}}
+
+### Информация об ордерах c ценой не менее 50
+GET http://localhost:8000/orders?price_min=50
+Authorization: Bearer {{token}}
+
+
 ### Новый ордер
 POST http://localhost:8000/orders/
 Authorization: Bearer {{token}}

@@ -2,6 +2,7 @@ from rest_framework import generics
 from rest_framework import viewsets
 from rest_framework import permissions
 
+from .filters import OrderFilters
 from .models import Currency, Order
 from .serializers import CurrencySerializer, OrderSerializer
 
@@ -23,3 +24,4 @@ class OrderViewSet(viewsets.ModelViewSet):
     serializer_class = OrderSerializer
     permission_classes = [permissions.IsAuthenticated]
     pagination_class = None  # remove pagination for now
+    filterset_class = OrderFilters
